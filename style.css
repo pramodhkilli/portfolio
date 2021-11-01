@@ -1,0 +1,34 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/* navbar styling starts */
+body{
+    background-color: black;
+    font-family: sans-serif;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    color: #09f755;
+    background-color:black;
+    padding : 2rem 1.5rem;
+}
+.main_heading{
+    font-family: 'Dancing Script', cursive;
+    transform: scale(1.2);
+}
+.header div {
+    display : flex;
+    align-items: center;
+}
+
+.buttons {
+    display: flex;
+    
+}
+/* navbar styling ends  */

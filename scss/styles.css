@@ -1,0 +1,150 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: black;
+  font-family: 'Roboto Mono', monospace;
+  color: #09f755;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 2rem 1.8rem;
+}
+
+.header .main_heading {
+  font-family: 'Roboto', sans-serif;
+}
+
+.header .menu_button div {
+  background-color: white;
+  height: 0.1rem;
+  margin: 0.25rem;
+}
+
+.header .menu_button .first_line {
+  width: 0.6rem;
+}
+
+.header .menu_button .second_line {
+  width: 0.9rem;
+}
+
+.header .menu_button .third_line {
+  width: 1.2rem;
+}
+
+.main_content {
+  padding: 10vh 15vw;
+  position: relative;
+}
+
+.main_content div {
+  color: white;
+}
+
+.main_content .first_text {
+  font-family: 'Roboto Mono', monospace;
+  position: relative;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.main_content .first_text::before, .main_content .first_text::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.main_content .first_text::before {
+  background-color: black;
+  -webkit-animation: typewriter 5s steps(14) 1s forwards;
+          animation: typewriter 5s steps(14) 1s forwards;
+}
+
+.main_content .first_text::after {
+  width: 0.1em;
+  height: 1em;
+  background-color: white;
+  -webkit-animation: typewriter 5s steps(14) 1s forwards, blink 0.7143s 1s infinite;
+          animation: typewriter 5s steps(14) 1s forwards, blink 0.7143s 1s infinite;
+}
+
+.main_content .second_text {
+  padding: 0.5rem 0;
+  font-size: 9em;
+  font-family: 'Roboto', sans-serif;
+  opacity: 0;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  -webkit-animation: moveup 2s ease 7s forwards;
+          animation: moveup 2s ease 7s forwards;
+}
+
+.main_content .third_text {
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  opacity: 0;
+  -webkit-animation: moveup 2s ease-in-out 10s forwards;
+          animation: moveup 2s ease-in-out 10s forwards;
+}
+
+@-webkit-keyframes typewriter {
+  to {
+    left: 100%;
+  }
+}
+
+@keyframes typewriter {
+  to {
+    left: 100%;
+  }
+}
+
+@-webkit-keyframes blink {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes blink {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes moveup {
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes moveup {
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
