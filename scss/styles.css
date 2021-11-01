@@ -44,7 +44,7 @@ body {
 }
 
 .main_content {
-  padding: 10vh 15vw;
+  padding: 17.5vh 10vw;
   position: relative;
 }
 
@@ -85,7 +85,7 @@ body {
 
 .main_content .second_text {
   padding: 0.5rem 0;
-  font-size: 9em;
+  font-size: 7em;
   font-family: 'Roboto', sans-serif;
   opacity: 0;
   -webkit-transform: translateY(100%);
