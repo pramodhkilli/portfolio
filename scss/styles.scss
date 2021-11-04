@@ -8,7 +8,9 @@ body{
     font-family: 'Roboto Mono', monospace;
     color: #09f755;
 }
-
+.wrapper {
+    height: 100vh;
+}
 .header {
     display: flex;
     justify-content: space-between;
@@ -41,8 +43,9 @@ body{
 }
 
 .main_content{
-    padding: 17.5vh 10vw;
+    padding: 15vh 10vw;
     position: relative;
+    height: 75vh;
 
     div{
         color: white;
@@ -59,7 +62,6 @@ body{
         bottom: 0;
         left: 0;
         right: 0;
-        // background-color: black;
     }
     .first_text::before{
         background-color: black;
@@ -84,11 +86,40 @@ body{
     .third_text {
         transform: translateY(100%);
         opacity: 0;
-        animation: moveup 2s ease-in-out 10s forwards;
+        animation: moveup 1s ease-in-out 9.25s forwards;
     }
 
+    .scroll_icon{
+        position: absolute;
+        bottom: 0;
+        right: 46%;
+        display: flex;
+        align-items: center;
+        opacity: 0;
+        transform: translateY(300%);
+        animation: arrow 1.5s ease-in-out 10.25s infinite;
+        .left_arrow {
+            background-color: white;
+            margin-right: -0.425em;
+            height: 0.3em;
+            width: 2em;
+            transform: rotate(-45deg);
+        }
+        .right_arrow {
+            background-color: white;
+            margin-left: -0.425em;
+            height: 0.3em;
+            width: 2em;
+            transform: rotate(45deg);
+        }
+    }
 }
-
+@keyframes arrow {
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 @keyframes typewriter {
     to{
         left : 100%;
@@ -107,5 +138,33 @@ body{
     to{
         transform: translateY(0);
         opacity: 1;
+    }
+}
+
+.study_info{
+    position: relative;
+    height: 100vh;
+    padding: 5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+
+    .background_icon{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        color: orangered;
+        transform: translate(-50%,-50%);
+        font-size: 40vh;
+        font-weight: bold;
+    }
+
+    .content {
+        position: absolute;
+        font-family: 'Roboto', sans-serif;
+        font-size: 2rem;
+        z-index: 1;
+        padding: 2em;
     }
 }
